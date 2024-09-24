@@ -3,8 +3,9 @@ public class Calculator{
     private String calcModel;
     
     //constructor that creates an instance of the calculator class
-    public Calculator() {
-        //implement code here
+    public Calculator(int number1, int number2) {
+        int num1 = number1;
+        int num2 = number2;
     }
     
     // method that performs the operation designated by operand (which
@@ -15,14 +16,28 @@ public class Calculator{
     // REMINDER: use .equals to test if one string is equal to another (not ==)
     // (THIS METHOD DOES NOT PRINT)
     public double performOperation(String operand, int num1, int num2) {
-        //implement code here
-        return 0.00;
+        if operand.equals("+") {
+            int addNum = num1 + num2;
+        }
+        else if operand.equals("-") {
+            int subNum = num1 - num2;
+        }
+        else if operand.equals("*") {
+            int subNum = num1 * num2;
+        }
+        else if operand.equals("/") {
+            double subNum = double(num1 / num2);
+        }
+        else {
+            return 0.00;
+        }
     }
 
     // method that checks if num1 is evenly divisible by num2, and if so,
     // returns true, and if not, returns false
     // (THIS METHOD DOES NOT PRINT)
     public boolean divisibleBy(int num1, int num2) {
+        if (num1)
         //implement code here
         return false;
     }
@@ -31,15 +46,20 @@ public class Calculator{
     // pair in the format: "(x, y)"
     // (THIS METHOD DOES NOT PRINT)
     public String coordinatePair(int x, int y) {
-        //implement code here
-        return "";
+        String pair = "(" + x + "," + y + ")";
+        return pair;
     }
     // method that determines and returns the result of |num1 - num2|
     // (THIS METHOD DOES NOT PRINT)
     public int absoluteValue(int num1, int num2) {
-        //implement code here
-        return 0;
+        int newnum = num1 - num2;
+        if (newnum < 0) {
+            newnum = newnum * -1;
+        }
+        return newnum;
     }
+
+ 
     
     // method that constructs and returns a String in the format:
     // "This calculator is a model "+____+" where "+____+" should be filled in
